@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+.message-area {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  margin-top: 10px;
+}
+.scheduler-container {
+  margin-top: 20px;
+}
+form {
+  margin-bottom: 20px;
+}
+form input {
+  margin-right: 10px;
+}
