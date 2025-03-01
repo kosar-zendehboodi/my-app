@@ -14,7 +14,6 @@ const App = () => {
     JSON.parse(localStorage.getItem("timeFormatState")) || false
   );
 
-  // 📌 دریافت اطلاعات از دیتابیس هنگام اجرای برنامه
   useEffect(() => {
     axios
       .get(`${API_URL}/data`)
@@ -27,7 +26,6 @@ const App = () => {
       .catch((error) => console.error("Error fetching messages:", error));
   }, []);
 
-  
   const addMessage = (messageText) => {
     const newMessage = { id: Date.now().toString(), text: messageText };
 
@@ -43,42 +41,51 @@ const App = () => {
     setTimeFormatState(newFormat);
     localStorage.setItem("timeFormatState", JSON.stringify(newFormat));
   };
-
   const onDataUpdated = (action, item, id) => {
- 
+    const stringId = id.toString();
+  
     if (action === "create") {
+      // بررسی کن که این رویداد قبلاً وجود دارد یا نه
+      const exists = events.some(event => event.id === stringId);
+  
+      if (!exists) {
+        const newItem = { ...item, id: stringId };
+  
+        axios
+          .post(`${API_URL}/data`, newItem)
+          .then((response) => {
+            setEvents((prevEvents) => [...prevEvents, response.data]);
+            addMessage(`✅ Event "${item.text}" added.`);
+          })
+          .catch((error) => console.error("Error adding event:", error));
+      }
+    } 
+    else if (action === "update") {
       axios
-        .post("http://localhost:3001/data", { ...item, id: id.toString() })
-        .then((response) => {
-          setEvents((prevEvents) => [...prevEvents, response.data]);
-          addMessage(`✅ Event "${item.text}" added.`);
-        })
-        .catch((error) => console.error("Error adding event:", error));
-    } else if (action === "update") {
-      axios
-        .put(`http://localhost:3001/data/${id.toString()}`, item)
+        .patch(`${API_URL}/data/${stringId}`, { text: item.text }) // فقط متن را تغییر بده
         .then(() => {
           setEvents((prevEvents) =>
             prevEvents.map((event) =>
-              event.id === id ? { ...event, ...item } : event
+              event.id === stringId ? { ...event, text: item.text } : event
             )
           );
           addMessage(`✏️ Event "${item.text}" updated.`);
         })
         .catch((error) => console.error("Error updating event:", error));
-    } else if (action === "delete") {
-      axios.delete(`http://localhost:3001/data/${id.toString()}`)
+    } 
+    else if (action === "delete") {
+      axios
+        .delete(`${API_URL}/data/${stringId}`)
         .then(() => {
           setEvents((prevEvents) =>
-            prevEvents.filter((event) => event.id !== id)
+            prevEvents.filter((event) => event.id !== stringId)
           );
-          addMessage(`✖️ Event "${id}" deleted.`);
+          addMessage(`✖️ Event "${stringId}" deleted.`);
         })
-        .catch((error) =>
-          console.error("❌ Error deleting event from DB:", error)
-        );
+        .catch((error) => console.error("❌ Error deleting event from DB:", error));
     }
   };
+  
 
   return (
     <div>

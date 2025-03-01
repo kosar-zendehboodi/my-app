@@ -37,10 +37,15 @@ export default function SchedulerView({ events, timeFormatState, onDataUpdated }
     });
 
     scheduler.attachEvent("onEventDeleted", function (id, ev) {
-    
-      onDataUpdated("delete", ev, id);
+      setTimeout(() => {
+        onDataUpdated("delete", ev, id);
+      }, 5000); 
     });
-
+    scheduler.attachEvent("onEventChanged", function (id, ev) {
+      onDataUpdated("update", ev, id.toString());
+    });
+    
+    
     function setHoursScaleFormat(state) {
       scheduler.config.hour_date = state ? "%H:%i" : "%g:%i %A";
       scheduler.templates.hour_scale = scheduler.date.date_to_str(
