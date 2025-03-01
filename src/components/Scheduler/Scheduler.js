@@ -6,7 +6,7 @@ export default function SchedulerView({ events, timeFormatState, onDataUpdated }
   let container = useRef(null);
 
   useEffect(() => {
-    if (!container.current) return; // اگر مقدار null بود، هیچی اجرا نشه
+    if (!container.current) return;
 
     let scheduler = Scheduler.getSchedulerInstance();
 
@@ -29,10 +29,17 @@ export default function SchedulerView({ events, timeFormatState, onDataUpdated }
     scheduler.parse(events);
 
     scheduler.createDataProcessor((type, action, item, id) => {
+      console.log("Action:", action, "ID:", id, "Item:", item);
       return new Promise((resolve) => {
+        if (!id && item.id) id = item.id; 
         onDataUpdated(action, item, id);
-        return resolve();
+        resolve();
       });
+    });
+
+    scheduler.attachEvent("onEventDeleted", function (id, ev) {
+      console.log("🚨 Event Deleted:", id, ev);
+      onDataUpdated("delete", ev, id);
     });
 
     function setHoursScaleFormat(state) {
@@ -42,7 +49,6 @@ export default function SchedulerView({ events, timeFormatState, onDataUpdated }
       );
       scheduler.updateView();
     }
-    
 
     setHoursScaleFormat(timeFormatState);
 
@@ -50,7 +56,7 @@ export default function SchedulerView({ events, timeFormatState, onDataUpdated }
       scheduler.destructor();
       container.current.innerHTML = "";
     };
-  }, [events, timeFormatState, onDataUpdated]); // وابستگی‌ها تکمیل شد
+  }, [events, timeFormatState, onDataUpdated]);
 
   return <div ref={container} style={{ width: "100%", height: "100%" }}></div>;
 }

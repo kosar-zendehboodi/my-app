@@ -1,110 +1,55 @@
 {
   "data": [
     {
-      "id": "1740642435674",
-      "start_date": "2025-02-26T01:00:00.000Z",
-      "end_date": "2025-02-26T06:35:00.000Z",
-      "text": "New event",
-      "_timed": true,
-      "_sday": 2,
-      "_inner": false,
-      "_sorder": 0,
-      "_count": 1,
-      "_mode": null
-    },
-    {
-      "id": "1740642440489",
-      "start_date": "2025-02-23T21:25:00.000Z",
-      "end_date": "2025-02-24T01:15:00.000Z",
-      "text": "مممممممممممممممممم",
-      "_timed": true,
-      "_sday": 0,
-      "_inner": false,
-      "_sorder": 0,
-      "_count": 1,
-      "_mode": null
-    },
-    {
-      "id": "1740642445900",
-      "start_date": "2025-02-24 23:00",
-      "end_date": "2025-02-25 02:30",
-      "text": "ززززززززززززز",
-      "!nativeeditor_status": "updated"
-    },
-    {
-      "id": "1740642448395",
-      "start_date": "2025-02-28T20:50:00.000Z",
-      "end_date": "2025-03-01T01:10:00.000Z",
-      "text": "New event",
-      "_timed": true,
-      "_sday": 5,
-      "_inner": false,
-      "_sorder": 0,
-      "_count": 1,
-      "_mode": null
-    },
-    {
-      "id": "1740643526935",
-      "start_date": "2025-02-26 00:55",
-      "end_date": "2025-02-26 03:20",
-      "text": "sdddddd",
-      "!nativeeditor_status": "inserted"
-    },
-    {
-      "id": "1740643526935",
-      "start_date": "2025-02-26 00:55",
-      "end_date": "2025-02-26 03:20",
-      "text": "hhhhhhhhhhhhhhh",
-      "!nativeeditor_status": "inserted"
-    },
-    {
-      "id": "1740644109103",
-      "start_date": "2025-02-04 00:00",
-      "end_date": "2025-02-13 00:00",
+      "id": "1740822896568",
+      "start_date": "2024-06-13 02:00",
+      "end_date": "2024-06-13 03:55",
       "text": "New event",
       "!nativeeditor_status": "inserted"
     },
     {
-      "id": "1740644109103",
-      "start_date": "2025-02-04 00:00",
-      "end_date": "2025-02-13 00:00",
-      "text": "h",
+      "id": "1740822896568",
+      "start_date": "2024-06-13 02:00",
+      "end_date": "2024-06-13 03:55",
+      "text": "lllllllllll",
       "!nativeeditor_status": "inserted"
     },
     {
-      "id": "1740644370148",
-      "start_date": "2025-02-25 03:40",
-      "end_date": "2025-02-25 07:25",
-      "text": "New event",
+      "id": "1740822896568",
+      "start_date": "2024-06-13 02:00",
+      "end_date": "2024-06-13 03:55",
+      "text": "lllllllllllggggggggggg",
       "!nativeeditor_status": "inserted"
+    }
+  ],
+  "messages": [
+    {
+      "id": "1740822700014",
+      "text": "✅ Event \"New event\" added."
     },
     {
-      "id": "1740644732914",
-      "start_date": "2024-06-11 02:10",
-      "end_date": "2024-06-11 06:10",
-      "text": "New event",
-      "!nativeeditor_status": "inserted"
+      "id": "1740822703544",
+      "text": "🗑 Event \"1740822696757\" deleted."
     },
     {
-      "id": "1740644732919",
-      "start_date": "2024-06-13 01:25",
-      "end_date": "2024-06-13 05:10",
-      "text": "New event",
-      "!nativeeditor_status": "inserted"
+      "id": "1740822899252",
+      "text": "✅ Event \"New event\" added."
     },
     {
-      "id": "1740644748097",
-      "start_date": "2024-06-10 00:10",
-      "end_date": "2024-06-10 04:50",
-      "text": "nnnnnnnnnnnn",
-      "!nativeeditor_status": "inserted"
+      "id": "1740822946731",
+      "text": "✅ Event \"lllllllllll\" added."
     },
     {
-      "id": "1740644732914",
-      "start_date": "2024-06-11 02:10",
-      "end_date": "2024-06-11 06:10",
-      "text": "jjjjjjjjjjjjjjjj",
-      "!nativeeditor_status": "inserted"
+      "id": "1740822962543",
+      "text": "✅ Event \"lllllllllllggggggggggg\" added."
+    },
+    {
+      "id": "1740822981314",
+      "text": "✅ Event \"New event\" added."
+    },
+    {
+      "id": "1740822987234",
+      "text": "✖️ Event \"1740822964964\" deleted."
     }
   ]
 }

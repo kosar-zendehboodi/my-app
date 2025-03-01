@@ -1,13 +1,16 @@
-const MessageArea = ({ messages }) => {
-  const formattedMessages = messages.map((message, index) => (
-    <li key={index}>{message}</li>
-  ));
+import React from "react";
 
+const MessageArea = ({ messages }) => {
   return (
     <div className="message-area">
       <h3>Messages:</h3>
-      <ul>{formattedMessages}</ul>
+      <ul>
+        {messages.map((message) => (
+          <li key={message.id}>{message.text}</li>
+        ))}
+      </ul>
     </div>
   );
 };
+
 export default MessageArea;
