@@ -45,7 +45,7 @@ const App = () => {
     const stringId = id.toString();
   
     if (action === "create") {
-      // بررسی کن که این رویداد قبلاً وجود دارد یا نه
+      
       const exists = events.some(event => event.id === stringId);
   
       if (!exists) {
@@ -62,7 +62,7 @@ const App = () => {
     } 
     else if (action === "update") {
       axios
-        .patch(`${API_URL}/data/${stringId}`, { text: item.text }) // فقط متن را تغییر بده
+        .patch(`${API_URL}/data/${stringId}`, { text: item.text }) 
         .then(() => {
           setEvents((prevEvents) =>
             prevEvents.map((event) =>
