@@ -29,7 +29,6 @@ export default function SchedulerView({ events, timeFormatState, onDataUpdated }
     scheduler.parse(events);
 
     scheduler.createDataProcessor((type, action, item, id) => {
-      console.log("Action:", action, "ID:", id, "Item:", item);
       return new Promise((resolve) => {
         if (!id && item.id) id = item.id; 
         onDataUpdated(action, item, id);
@@ -38,7 +37,7 @@ export default function SchedulerView({ events, timeFormatState, onDataUpdated }
     });
 
     scheduler.attachEvent("onEventDeleted", function (id, ev) {
-      console.log("🚨 Event Deleted:", id, ev);
+    
       onDataUpdated("delete", ev, id);
     });
 

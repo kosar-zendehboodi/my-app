@@ -1,4 +1,83 @@
 {
-  "data": [],
-  "messages": []
+  "data": [
+    {
+      "id": "1740823222963",
+      "start_date": "2024-06-12 09:40",
+      "end_date": "2024-06-12 12:55",
+      "text": "ooooooooooooooooooo",
+      "!nativeeditor_status": "inserted"
+    },
+    {
+      "id": "1740823274218",
+      "start_date": "2024-06-11 05:35",
+      "end_date": "2024-06-11 08:15",
+      "text": "New event",
+      "!nativeeditor_status": "inserted"
+    },
+    {
+      "id": "1740823385578",
+      "start_date": "2024-06-11 00:20",
+      "end_date": "2024-06-11 04:25",
+      "text": "New event",
+      "!nativeeditor_status": "inserted"
+    }
+  ],
+  "messages": [
+    {
+      "id": "1740823189392",
+      "text": "✅ Event \"dres\" added."
+    },
+    {
+      "id": "1740823196771",
+      "text": "✅ Event \"ir\" added."
+    },
+    {
+      "id": "1740823206923",
+      "text": "✖️ Event \"1740823180318\" deleted."
+    },
+    {
+      "id": "1740823215636",
+      "text": "✖️ Event \"1740823180318\" deleted."
+    },
+    {
+      "id": "1740823231234",
+      "text": "✅ Event \"New event\" added."
+    },
+    {
+      "id": "1740823255883",
+      "text": "✅ Event \"ooooooooooooooooooo\" added."
+    },
+    {
+      "id": "1740823323061",
+      "text": "✅ Event \"New event\" added."
+    },
+    {
+      "id": "1740823345671",
+      "text": "✅ Event \"New event\" added."
+    },
+    {
+      "id": "1740823355085",
+      "text": "✅ Event \"New event\" added."
+    },
+    {
+      "id": "1740823358334",
+      "text": "✖️ Event \"1740823274213\" deleted."
+    },
+    {
+      "id": "1740823374576",
+      "text": "✖️ Event \"1740823274213\" deleted."
+    },
+    {
+      "id": "1740823391976",
+      "text": "✅ Event \"New event\" added."
+    },
+    {
+      "id": "1740823398402",
+      "text": "✅ Event \"New event\" added."
+    },
+    {
+      "id": "1740823402065",
+      "text": "✖️ Event \"1740823385573\" deleted."
+    }
+  ]
 }
